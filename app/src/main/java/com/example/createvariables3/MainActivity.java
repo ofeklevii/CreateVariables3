@@ -18,13 +18,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void exe3(View view) {
-        str = sum + "";
-        btn.setText("This is a click number:" + str);
-        if (sum==6)
+        if (sum<6)
         {
-            btn.setText("Enough to click. Go to new start!");
-            sum=0;
+            str = sum + "";
+            btn.setText("This is a click number:" + str);
+            sum++;
         }
-        sum++;
+        else {
+            btn.setText("Enough to click. Go to new start!");
+            sum = 0;
+        }
     }
 }
